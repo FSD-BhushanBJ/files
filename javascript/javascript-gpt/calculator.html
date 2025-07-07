@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Calculator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .main-container {
+      width: 90%;
+      max-width: 500px;
+      background-color: tomato;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 5px solid black;
+    }
+
+    .display {
+      background-color: bisque;
+      width: 100%;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 15px;
+      font-size: 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 2px solid #000;
+      background-color: aquamarine;
+    }
+
+    .buttons {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .submit-button {
+      padding: 15px;
+      font-size: 24px;
+      border-radius: 10px;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .submit-button:hover {
+      background-color: darkgreen;
+    }
+
+    @media (max-width: 768px) {
+      .buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .submit-button {
+        font-size: 20px;
+        padding: 12px;
+      }
+
+      input[type="number"] {
+        font-size: 18px;
+        padding: 12px;
+      }
+
+      .display {
+        font-size: 20px;
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .buttons {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="display">
+      <span id="display">Display</span>
+    </div>
+
+    <input type="number" id="input-one" placeholder="Enter number 1" />
+    <input type="number" id="input-two" placeholder="Enter number 2" />
+
+    <div class="buttons">
+      <button class="submit-button" onclick="addition()">+</button>
+      <button class="submit-button" onclick="subtraction()">-</button>
+      <button class="submit-button" onclick="multiplication()">×</button>
+      <button class="submit-button" onclick="division()">÷</button>
+    </div>
+  </div>
+
+  <script>
+    function addition() {
+      let num1 = Number(document.getElementById("input-one").value);
+      let num2 = Number(document.getElementById("input-two").value);
+      document.getElementById("display").innerText = num1 + num2;
+    }
+
+    function subtraction() {
+      let num1 = Number(document.getElementById("input-one").value);
+      let num2 = Number(document.getElementById("input-two").value);
+      document.getElementById("display").innerText = num1 - num2;
+    }
+
+    function multiplication() {
+      let num1 = Number(document.getElementById("input-one").value);
+      let num2 = Number(document.getElementById("input-two").value);
+      document.getElementById("display").innerText = num1 * num2;
+    }
+
+    function division() {
+      let num1 = Number(document.getElementById("input-one").value);
+      let num2 = Number(document.getElementById("input-two").value);
+      document.getElementById("display").innerText =
+        num2 === 0 ? "Cannot divide by zero" : num1 / num2;
+    }
+  </script>
+</body>
+</html>

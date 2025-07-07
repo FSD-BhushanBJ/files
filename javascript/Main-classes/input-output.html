@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Input-Output Class</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .input-field{
+            width: 550px;
+            height: 200px;
+            background-color: lightcoral;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        p{
+            font-size: 30px;
+        }
+        input{
+            width: 90%;
+            height: 25%;
+            font-size: 30px;
+            border-width: 5px;
+            border-radius: 10px;
+        }
+        button{
+            width: 50%;
+            height: 25%;
+            background-color: green;
+            color: wheat;
+            margin-left: 110px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body><div>
+    <p  id="result">Output</p>
+    <div><p id="display">Display</p></div>
+    <div class="input-field">
+        
+        <input type="text" id="input" placeholder="Enter a number">
+        <button onclick="inputFunction()">Submit</button>
+    </div>
+    </div>
+    <script>
+        //assign
+        // var number = 10;
+        //output
+        // console.log(number);                                    //output on console
+        // alert(number)                                           //output on alert
+        // document.getElementById('result').innerHTML=number      //output on HTML
+
+
+
+        // input using prompt
+        // var number = prompt("Enter a number");
+        // console.log(number);                                    //output on console
+        // alert(number)                                           //output on alert
+        // document.getElementById('result').innerHTML=number      //output on HTML
+
+        //input using html
+        function inputFunction(){
+            var number = document.getElementById('input').value;
+            document.getElementById('display').innerHTML = number;
+            alert(number);
+            console.log(number);
+        }
+       
+        
+    </script>
+</body>
+</html>

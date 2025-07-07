@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Function Class Login Page</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .main-container{
+            width: 40%;
+            height: 70%;
+            background-color: tomato;
+            border-radius: 10px;
+            margin-left: 500px;
+            margin-top: 20px;
+            display: grid;
+            border-style: solid;
+            border-width: 5px;
+            
+            
+        }
+        .text{
+            font-size: 40px;
+            color: black;
+            width: 100%;
+            margin-left: 200px;
+            text-align: center;
+            border-radius: 10px;
+
+
+        }
+        .display{
+            width: 80%;
+            height: 70%;
+            background-color: bisque;
+            margin-left: 70px;
+            font-size: 20px;
+            border-radius: 10px;
+
+        }
+        input{
+            width: 80%;
+            height: 60%;
+            font-size: 40px;
+            background-color: aquamarine;
+            margin-left: 70px;
+            border-radius: 10px;
+
+        }
+        
+        .submit-button{
+            width: 80%;
+            height: 60%;
+            background-color: green;
+            margin-left: 70px;
+            margin-top: 50px;
+            border-radius: 10px;
+            font-size: 30px;
+        }
+        .submit-button:hover{
+            background-color: aliceblue;
+        }
+        .button-group{
+            margin-top: 50px;
+            margin-left: 150px;
+            height: auto;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+            gap: 20px;
+        }
+        .btn{
+            height: 80px;
+            font-size: 20px;
+            background-color: turquoise;
+            color: black;
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+        <!-- Main container start-->
+    <div class="main-container">
+
+
+        <!-- display section -->
+        <div class="display">
+            <span class="text" id="display">Display</span>
+        </div>
+
+
+        <!-- input section -->
+        <input type="text" id="input-one" placeholder="Enter a number 1">
+        <input type="text" id="input-two" placeholder="Enter a number 2">
+
+
+        <!-- button section -->
+        <button class="submit-button">Login</button>
+    </div>
+    <!-- Main container end -->
+
+    <!-- Button Group -->
+    <div class="button-group">
+        <button class="btn" onclick="displaySunday()" id="sunday">Sunday</button>
+        <button class="btn" onclick="displayMonday()" id="monday">Monday</button>
+        <button class="btn"onclick="displayTuesday()" id="tuesday">Tuesday</button>
+        <button class="btn" onclick="displayWednesday()" id="wednesday">Wednesday</button>
+        <button class="btn" onclick="displayThusday()" id="thusday">Thusday</button>
+        <button class="btn"onclick="displayFriday()" id="friday">Friday</button>
+        <button class="btn" onclick="displaySaturday()" id="saturday">Saturday</button>
+    </div>
+    <!-- Button Group end -->
+
+    <script>
+        function displaySunday(){
+            document.getElementById("display").innerHTML = "Today is a Sunday !"
+            document.getElementById("sunday").style.backgroundColor = "green"
+            document.getElementById("sunday").style.color = "white"
+        }
+
+
+        function displayMonday(){
+            document.getElementById("display").innerHTML = "Today is a Monday !"
+            document.getElementById("monday").style.backgroundColor = "green"
+            
+        }
+
+
+        function displayTuesday(){
+            document.getElementById("display").innerHTML = "Today is a Tuesday !"
+            document.getElementById("tuesday").style.backgroundColor = "green"
+        }
+
+
+        function displayWednesday(){
+            document.getElementById("display").innerHTML = "Today is a Wednesday !"
+            document.getElementById("wednesday").style.backgroundColor = "green"
+        }
+
+
+        function displayThusday(){
+            document.getElementById("display").innerHTML = "Today is a Thusday !"
+            document.getElementById("thusday").style.backgroundColor = "green"
+        }
+
+
+        function displayFriday(){
+            document.getElementById("display").innerHTML = "Today is a Friday !"
+            document.getElementById("friday").style.backgroundColor = "green"
+        }
+        
+        function displaySaturday(){
+            document.getElementById("display").innerHTML = "Today is a Saturday !"
+            document.getElementById("saturday").style.backgroundColor = "green"
+        }
+    </script>
+</body>
+</html>

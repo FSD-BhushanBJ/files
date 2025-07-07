@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Opration</title>
+    <style>
+        .main-container{
+            width: 500px;
+            display: grid;
+            height: 500px;
+            padding-left: 600px;
+        }
+        .input-one{
+            display: grid;
+        }
+        .input-two{
+            display: grid;
+        }
+        input{
+            height: 80px;
+        }
+        p{
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+    <h1>Number Comparison</h1>
+    <div class="input-one">
+        <label for="num1">Enter a First Number</label>
+        <input type="number" id="num1" placeholder="Enter a Number">
+    </div>
+    <div class="input-two">
+        <label for="num2">Enter a Second Number</label>
+        <input type="text" id="num2" placeholder="Enter a Number">
+    </div>
+        <div class="buttons"></div>
+        <button onclick="compareNumber()">Compare Numbers</button>
+        <div id="result"></div>
+    </div>
+        
+    <script>
+         function compareNumber(){
+            const num1 = Number(document.getElementById("num1").value);
+            const num2 = Number(document.getElementById("num2").value);
+
+            document.getElementById("result").innerHTML = num1 > num2;
+         }
+    </script>
+</body>
+</html>

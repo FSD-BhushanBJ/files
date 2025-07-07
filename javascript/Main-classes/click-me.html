@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Me</title>
+    
+</head>
+<body>
+    <div class="main-container">
+        <button onclick="showMassage()">Click Me</button>
+        <br>
+        <div id="name" class="display" style="width: 600px; height: 1%;"></div>
+
+    </div>
+    <script>
+        // let name = prompt("Welcome To JavaScript");
+        // alert(name)
+
+        function showMassage(){
+            document.getElementById("name").innerHTML = "Welcome to javascript!"
+        }
+    </script>
+</body>
+</html>

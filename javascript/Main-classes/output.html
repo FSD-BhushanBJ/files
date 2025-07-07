@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --bg-light: #f4f4f4;
+      --bg-dark: #121212;
+      --text-light: #121212;
+      --text-dark: #f4f4f4;
+      --primary: #4e89ae;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: all 0.3s ease;
+    }
+
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--primary);
+      color: white;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .toggle-btn {
+      cursor: pointer;
+      background: white;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .dark-mode .project-card {
+      background: #1e1e1e;
+      color: var(--text-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+    }
+
+    .dark-mode footer {
+      background: #1e1e1e;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.7rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="toggle-btn" onclick="toggleDarkMode()">🌓</button>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am an aspiring full-stack developer learning HTML, CSS, and JavaScript.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>A simple web page layout using HTML and CSS.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Responsive design practice project with CSS Grid.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 3</h3>
+        <p>Interactive to-do list using JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: you@example.com</p>
+    <p>Phone: +91 12345 67890</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Portfolio</p>
+  </footer>
+
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      scrollTopBtn.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>

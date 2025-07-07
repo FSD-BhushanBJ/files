@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            border-style: solid;
+            border-color: black;
+            height: 70%;
+            width: 50%;
+            border-width: 2px;
+            margin-left: 450px;
+            margin-top: 80px;
+            background: linear-gradient(blue,red,green,yellow);
+        }
+        p{
+            font-size: 35px;
+            color: green;
+        }
+        .display{
+            height: 30%;
+            width: 80%;
+            border-style: solid;
+            border-color: black;
+            margin-left: 80px;
+            margin-top: 30px;
+            font-size: 30px;
+        }
+        .input-field{
+            height: 30%;
+            width: 80%;
+            border-style: solid;
+            border-color: black;
+            margin-left: 80px;
+            margin-top: 30px;
+        }
+        input{
+            height: 30%;
+            width: 80%;
+            border-style: solid;
+            border-color: black;
+            margin-left: 80px;
+            margin-top: 30px;
+            font-size: 30px;
+            
+        }
+        .btn{
+            height: 10%;
+            width: 80%;
+            border-style: solid;
+            border-color: black;
+            margin-left: 80px;
+            margin-top: 30px;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+        .btn:hover{
+            background-color: red;
+            width: 80%;
+            height: 10%;
+            
+            
+        }
+      
+    </style>
+    <script>
+        function bhusu(){
+            alert("hellow kaku");
+            let a = 25;
+            console.log(a);
+            return "bye";
+        }
+
+        function displaySum(){
+            document.getElementById("display").innerHTML = "2 * 2 = " + 2*2;
+            return 10;
+        }
+
+        function inputValue(){
+            let number = document.getElementById("input").value;
+            document.getElementById("display").innerHTML = number;//UI
+            console.log(number);//Console
+            alert(number); //Alert
+        }
+
+        function bhola(){
+            let number = document.getElementById("input").value;
+
+            document.getElementById("display").innerHTML = number;
+            alert(number);
+            console.log(number);
+
+        }
+        
+        
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="display" id="display"></div>
+        <div class="input-field">
+            <input type="number" id="input" placeholder="Enter number">
+        </div>
+        <button class="btn" onclick="bhola()">Click Me</button>
+    </div>
+</body>
+</html>

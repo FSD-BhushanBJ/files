@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 40%;
+            height: 60%;
+            background-color: rgb(180, 179, 174);
+            border-radius: 10px;
+           
+            
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        select{
+         width: 60%;
+         height: 8%;
+         margin-left: 100px;
+        }
+        input{
+            width: 60%;
+         height: 8%;
+         margin-left: 100px;
+        }
+        button{
+            width: 60%;
+            height: 8%;
+            margin-left: 100px;
+        }
+        .display{
+            width: 80%;
+            height: 15%;
+            background-color:white ;
+            margin-left: 50px;
+            text-align: center;
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌏 Language Selector</h1>
+        <h2>Select a langauge:</h2>
+    <input name="" id="input-time">
+    
+    <button onclick="greetingMsg()">Convert</button>
+    <p id="display" class="display"></p>
+</div>
+    <script>
+      function greetingMsg(){
+        var time = Number (document.getElementById("input-time").value);
+        let greetingMsg = "";
+        
+ 
+        
+        switch (true){
+            case (time >= 5 && time <= 11.59):
+                alert("Good Morning");
+                greetingMsg ="Good Morning";
+                break;
+ 
+                case (time >= 12 && time <= 5.59):
+                alert("Good Afternoon");
+                greetingMsg ="Good Afternon";
+                break;
+ 
+                case (time >= 6 && time <= 9.59):
+                alert("Good Evening");
+                greetingMsg ="Good Evening";
+                break;
+ 
+                case (time >= 10 && time <= 3.59):
+                alert("Good Night");
+                greetingMsg ="Good Night";
+                break;
+        }
+        document.getElementById("display").innerHTML = greetingMsg;
+      }
+      
+    </script>
+</body>
+</html>

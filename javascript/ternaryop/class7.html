@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blectric Bill</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .container{
+            width: 40%;
+            height: 40%;
+            background-color: lightcoral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+        input{
+            width: 90%;
+            height: 15%;
+            font-size: 25px;
+        }
+        button{
+            width: 90%;
+            height: 15%;
+            font-size: 20px;
+        }
+        #display{
+            width: 90%;
+            height: 25%;
+            font-size: 25px;
+            background-color: black;
+            color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <input type="text" id="input">
+        <button onclick="clickMe()">Check Temparature</button>
+        <div id="display">Display</div>
+    </div>
+    <script>
+     function clickMe(){
+
+        let celcius = document.getElementById("input").value;
+        let display = document.getElementById("display").innerHTML;
+
+        if(celcius >= 40){
+            display = "Very Hot"
+            document.getElementById("container").style.backgroundColor = "red";
+        }
+        else if(celcius >= 35){
+            display = "Hot"
+            document.getElementById("container").style.backgroundColor = "lightred";
+        }
+        else if(celcius >= 25){
+            display = "Warm"
+            document.getElementById("container").style.backgroundColor = "lightorange";
+        }
+        else if(celcius >= 15){
+            display = "Pleasant"
+            document.getElementById("container").style.backgroundColor = "lightseagreen";
+        }
+        else if (celcius >= 5 ){
+            display = "Cool";
+            document.getElementById("container").style.backgroundColor = "aqua"
+        }
+        document.getElementById("display").innerHTML =celcius + " °C" +" wheather is " + display;
+        
+        
+     }
+        
+    </script>
+</body>
+</html>
+</body>
+</html>

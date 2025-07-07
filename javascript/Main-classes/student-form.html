@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Form</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 100Vw;
+            height: 80px;
+            background-color: grey;
+            text-align: center;
+            color: white;
+            padding-top: 10px;
+            border-radius: 10px;
+            
+        }
+        .main-container{
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        h2{
+            margin-left: 20px;
+        }
+        .section-one{
+            width: 100%;
+            height: 700px;
+            background-color: lightcyan;
+            border-style: solid;
+            border-radius: 10px;
+
+        }
+        .student-list{
+            font-size: 35px;
+        }
+        input{
+            width: 740px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: transparent;
+            font-size: 20px;
+        }
+        button{
+            width: 750px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: lightgreen;
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            margin-left: 40px;
+        }
+        .section-two{
+            width: 100%;
+            height: 700px;
+            background-color: lightcyan;
+            border-style: solid;
+            
+            
+        }
+        p{
+            font-size: 25px;
+            font-weight: 700;
+            margin-left: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <h1>Student Form Submission</h1>
+    </header>
+    <!-- main-container -->
+    <div class="main-container" >
+        <!-- section-one -->
+        <div class="section-one">
+            <h2>Student Information :-</h2>
+            <ul class="student-list">
+                <li>Student Name</li>
+                <input type="text" id="inputName" placeholder="Enter Student Name">
+                <li>Student Age</li>
+                <input type="number" id="inputAge" placeholder="Enter Student Age">
+                <li>Total Marks</li>
+                <input type="number" id="inputMarks" placeholder="Enter Student Marks">
+                <li>Favourite Game</li>
+                <input type="text" id="inputGame" placeholder="Enter Favourite Game">
+                <li>Result</li>
+                <input type="text" id="inputResult" placeholder="Enter Student Result">
+            </ul>
+            <button onclick="showNames()">Submit</button>
+        </div>
+        <!-- section-two -->
+        <div class="section-two">
+            <h2>Display Submit Information :-</h2>
+            <p class="sec-dis" id="displayName">Name:</p>
+            <p class="sec-dis" id="displayAge">Age:</p>
+            <p class="sec-dis" id="displayMarks">Marks:</p>
+            <p class="sec-dis" id="displayGame">Favourite Game:</p>
+            <p id="displayResult">Result:</p>
+        </div>-
+    </div>
+        <script>
+        function showNames() {
+            document.getElementById('displayName').innerHTML = "Name: " + document.getElementById('inputName').value;
+            document.getElementById('displayAge').innerHTML = "Age: " + document.getElementById('inputAge').value;
+            document.getElementById('displayMarks').innerHTML = "Marks: " + document.getElementById('inputMarks').value;
+            document.getElementById('displayGame').innerHTML = "Favourite Game: " + document.getElementById('inputGame').value;
+            document.getElementById('displayResult').innerHTML = "Result: " + document.getElementById('inputResult').value;
+        }
+    </script>
+</body>
+</html>

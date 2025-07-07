@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="input">
+    <button onclick="getTable()"> get tables</button>
+    <p id="display"></p>
+    <script>
+     
+        function getTable(){
+            let number = Number(document.getElementById("input").value);
+            let table = "";
+            for(let i = 1; i <= 10; i++){
+                table += number * i + "<br/>";            
+            }
+            document.getElementById("display").innerHTML = table; 
+        }
+       
+    </script>
+</body>
+</html>

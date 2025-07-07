@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 500px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+      }
+      #display {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="class">
+      <h1>While Loop</h1>
+      <button onclick="x()">x</button>
+      <button onclick="y()">Hellooooo</button>
+      <button onclick="t()">Hellooooo</button>
+
+
+
+
+
+
+      
+      <button onclick="html()">Hellooooo</button>
+      <pre id="display"></pre>
+    </div>
+    <script>
+      function html() {
+        let display = " ";
+        let x = 1;
+        while (x <= 5) {
+          display += `<div class='box'>${x}</div>`;
+          x++;
+          // "<h1>Hello World</h1>" + "<pre>Bhushan Jatgade</pre>" + "<b>Katol</b>"
+        }
+        document.getElementById("display").innerHTML = display;
+        console.log(display);
+      }
+      function x() {
+        let display = "";
+
+        let i = 1;
+        while (i <= 10) {
+          display += i * 2;
+          let j = 1;
+          while (j <= i) {
+            display += "a";
+            j++;
+          }
+          i++;
+        }
+        document.getElementById("display").innerHTML = display;
+        console.log(display);
+      }
+      function y() {
+        let display = "";
+
+        let i = -10;
+
+        while (i <= 9) {
+          if (i < 1) {
+            display += i + " ";
+          } else {
+            display += " +" + i;
+          }
+
+          i++;
+        }
+        // while (i <= 1024) {
+        //   display += i + " ";
+        //   i = i * 2;
+        // }
+        // other way of this
+
+        document.getElementById("display").innerHTML = display;
+        console.log(display);
+      }
+      function t() {
+        let display = "";
+
+        let i = 1;
+
+        while (i <= 10) {
+          if (i != 5) {
+            display += i;
+          } else {
+            display += " ";
+          }
+
+          i++;
+        }
+
+        document.getElementById("display").innerHTML = display;
+        console.log(display);
+      }
+    </script>
+  </body>
+</html>

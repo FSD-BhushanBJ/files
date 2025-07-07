@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="enter 1" id="input-one"/>
+    <input type="number" placeholder="enter 2" id="input-two"/>
+    <input type="number" placeholder="enter 2" id="input-two"/>
+    <button onclick="myFunction()">Output</button>
+    <p id="result"></p>
+    <!-- <p id="show-diff"></p> -->
+
+    <script>
+        // let num1 = 0;
+        // let num2 = 0;
+        
+       
+
+        function myFunction(){
+            let num1 = Number(document.getElementById("input-one").value);
+            let num2 = Number(document.getElementById("input-two").value);
+          
+            let sum = num1 + num2
+            document.getElementById("show-sum").innerText = sum;
+
+            let diff = num1 - num2
+          document.getElementById("show-diff").innerText = diff;
+          document.getElementById("show-diff").innerText = diff;
+
+        }
+    </script>
+</body>
+</html>

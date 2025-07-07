@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum and Difference</title>
+    <style>
+        .main-container{
+            width: 600px;
+            height: 500px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="display">
+          <span id="display">Display</span>
+        </div>
+        <label for="">First number :</label>
+        <br>
+        <input type="number" id="input-one" placeholder="Enter number 1" />
+        <br>
+        <label for="">Second number :</label>
+        <br>
+        <input type="number" id="input-two" placeholder="Enter number 2" />
+    
+        <div class="buttons">
+          <button class="submit-button" onclick="addition()">+</button>
+          <button class="submit-button" onclick="subtraction()">-</button>
+                </div>
+                </div>
+          <script>
+            function addition() {
+              let num1 = Number(document.getElementById("input-one").value);
+              let num2 = Number(document.getElementById("input-two").value);
+              document.getElementById("display").innerText = num1 + num2;
+            }
+
+        </script>
+</body>
+</html>
+

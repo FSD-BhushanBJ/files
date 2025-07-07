@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordereing food</title>
+</head>
+<body>
+   
+    <pre>
+        1.Aaloo cha bharit:30
+        2.Bhajeli Machi:40
+        3.Waran:50
+        0.zala j1
+    </pre>
+    <button onclick="Order()">Order</button>
+    <p id="display"></p>
+    <script>
+        function Order(){
+
+            alert("What can you having sir");
+            let total = 0;
+
+            while(true){
+                let choice = prompt("Enter your choice");
+
+                if(choice == 1){
+                    total = total + 30;
+                    alert("great choice")
+                }
+                else if (choice == 2){
+                    total = total + 40;
+                    alert("it chef best by the way")
+                }
+                else if (choice == 3){
+                    total = total + 50;
+                    alert("that's awosome choice")
+                }
+                else if(choice == 0){
+                    document.getElementById("display").innerHTML = "Your total bill is " + total;
+                    break;
+                }
+                else{
+                    alert("this is not available right now")
+                }
+            }
+           
+        }
+    </script>
+</body>
+</html>

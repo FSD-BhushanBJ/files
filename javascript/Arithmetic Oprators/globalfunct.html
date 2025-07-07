@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Var</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vw;
+            width: 100vh;
+            display: flex;
+            justify-content: center;
+           
+        }
+
+        .main-container {
+            height: 500px;
+            width: 400px;
+            background-color: lightcoral;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .display {
+            height: 80px;
+            width: 300px;
+            background-color: wheat;
+            font-size: 25px;
+            text-align: center;
+            padding-top: 12px;
+        }
+
+        button {
+            height: 80px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="display" id="result"></div>
+        
+        <br>
+        <button onclick="addNumber()">Add Coin</button>
+        <button onclick="subNumber()">Sub Coin</button>
+        <br>
+        <p id="add-coin"></p>
+        <p id="sub-coin"></p>
+    </div>
+    <script>
+
+
+        //global variable
+        let number = 0;
+        document.getElementById("result"), innerHTML = number;
+
+        // function for add numbers
+        function addNumber() {
+            let coin = Number(prompt("Add a Number"));
+
+            number = number + coin;
+            document.getElementById("result").innerHTML = number;
+            document.getElementById("add-coin").innerHTML = coin;
+
+        }
+
+        // function for subtract numbers
+        function subNumber() {
+            let subsCoin = Number(prompt("Sunbstract a Number"));
+
+            number = number - subsCoin;
+            document.getElementById("result").innerHTML = number;
+            document.getElementById("sub-coin").innerHTML = subsCoin;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Comparator</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        .main-container{
+            width: 600px;
+            height: 500px;
+            background-color: lightcoral;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        label{
+            height: 60px;
+            font-size: 35px;
+        }
+        input{
+            height: 50px;
+        }
+        button{
+            height: 50px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Score Comparator</h1>
+        <label for="">First Score :  </label>
+        <input type="text">
+        <br>
+        <label for="">Second Score :</label>
+        <input type="text">
+        <br>
+        <button onclick="CompareScore()">Compare Scores</button>
+        <br>
+        <div class="display"></div>
+    </div>
+    <script>
+        function CompareScore(){
+        let score1 =  Number (prompt("Enter a score"))
+        let score2 =  Number (prompt("Enter a score"))
+        let displaymsg ="";
+
+        if(score1 >= score2){
+            displaymsg = "First score("+score1+") is greater than second score ("+score2+")";
+        }
+        else{
+             displaymsg = "First score("+score2+") is greater than second score ("+score1+")";
+        }
+        alert(displaymsg);
+        }
+
+      
+    </script>
+</body>
+</html>

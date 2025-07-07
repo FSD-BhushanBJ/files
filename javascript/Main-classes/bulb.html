@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bulb</title>
+    <style>
+        body{
+            background-color: black;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h1{
+            color: white;
+            text-align: center;
+        }
+        .main-container{
+            width: 200px;
+            height: 300px;
+            margin-left: 635px;
+            margin-top: 100px;
+            background-color: black;
+            
+        }
+        .click{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 5px;
+        }
+        button{
+            height: 80px;
+            width: 198px;
+            gap: 5px;
+            font-size: 25px;
+            color: yellow;
+            border-radius: 20px;
+            border-style: solid;
+            border-color: grey;
+        }
+        button:hover{
+            background-color: lightgoldenrodyellow;
+        }
+        .on{
+            background-color: green;
+    
+        }
+        .off{
+            background-color: red;
+        }
+        img{
+            height: 500px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click on <mark>'ON'</mark> Button to turn it on</h1>
+    <div class="main-container">
+        <img src="../assets/Bulb is Off.png" id="image" />
+        <div class="click">
+        <button onclick="changeImage()" class="on">ON</button>
+        <button onclick="imageChange()" class="off">OFF</button>
+    </div>
+    </div>
+    <script>
+        function changeImage(){
+            document.getElementById('image').src='../assets/Bulb is On.png';
+        }
+        function imageChange(){
+            document.getElementById('image').src='../assets/Bulb is Off.png';
+        }
+    </script>
+</body>
+</html>

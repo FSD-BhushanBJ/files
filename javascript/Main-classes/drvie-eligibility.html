@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive Eligibility Checker</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            height: 100%;
+            width: 100%;
+
+        }
+        .display{
+            height: 70%;
+        }
+        .show{
+            width: 450px;
+            
+        }
+        
+        .btn{
+            width: 450px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="display">
+        <h1>Drive Eligibilty Checker</h1>
+        <label for="age">Enter Your Age :</label>
+        <br>
+        <input class="show" type="number" name="" id="age">
+        <br>
+        <input class="check" type="checkbox" id="haslicense">I have a valid driver's license
+        <label for="haslicense"></label>
+        <br>
+        <button class="btn" onclick="checkEligibilty()">Check Eligibilty</button>
+        <br>
+        <div id="result"></div>
+    </div>
+    </div>
+    <script>
+
+        function checkEligibilty(){
+            const age = Number(document.getElementById("age").value);
+            const haslicense = document.getElementById("haslicense").checked;
+
+            document.getElementById("result").innerHTML = age>=18 && haslicense;
+            alert(age>=18 && haslicense);
+        }
+    </script>
+</body>
+</html>

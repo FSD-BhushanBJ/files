@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day & Date</title>
+</head>
+<body>
+    <script>
+        let day = new Date().getDay();
+        let date = new Date().getDate();
+        let month = new Date().getMonth() + 1;
+        let year = new Date().getFullYear();
+        let displaymsg=""
+        if(day == 0 || day == 6){
+            displaymsg = "Today is weekend";
+        }
+        else{
+            displaymsg = "Today is weekday"
+        }
+        alert(displaymsg + " \n" + date + "/" + month+ "/"+year)
+        console.log(displaymsg)
+    </script>
+</body>
+</html>

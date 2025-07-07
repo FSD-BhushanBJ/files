@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Example</title>
+</head>
+<body>
+
+  <h2>Get Input Example</h2>
+
+  <!-- UI input -->
+  <input type="text" id="userInput" placeholder="Enter something">
+  <button onclick="handleInput()">Submit</button>
+
+  <p id="outputText"></p> <!-- Output on UI -->
+<code>#include <stdio.h>
+    #include <stdbool.h>
+    int main (){
+        int a = 112;
+        int b = 32;
+        bool result = a > b;
+        printf("a is greater than b : %d", result);
+    
+    }</code>
+    <h3>Terminal</h3>
+    <code>y
+        True
+        a is greater than b True</code>
+  <script>
+    function handleInput() {
+      // 1. Get input from UI
+      let input = document.getElementById("userInput").value;
+
+      // 2. Use prompt (optional)
+      let additionalInput = prompt("Add more to your input:", input);
+
+      // 3. Assign it to a variable
+      let finalInput = additionalInput;
+
+      // 4a. Show in console
+      console.log("Input:", finalInput);
+
+      // 4b. Show on UI
+      document.getElementById("outputText").innerText = "You entered: " + finalInput;
+
+      // 4c. Show in alert
+      alert("You entered: " + finalInput);
+    }
+    
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank System</title>
+</head>
+<body>
+    <pre>
+       <h1>Choices</h1>
+        1.Deposite
+        2.Withdrawn
+        3.Balance
+        4.Exit
+    </pre>
+    <button onclick="System()">Banking!!!!
+    </button>
+    <p id="display"></p>
+    <script>
+        function System(){
+
+            alert("What can you help you");
+            let total = 10000;
+            
+
+            while(true){
+                let choice = prompt("Enter your choice");
+               
+
+                if(choice == 1){
+                    let deposite = Number(prompt("Enter amount for deposite"));
+                    total = total + deposite;
+                    alert("Your amount is deposited " + total);
+                }
+                else if (choice == 2){
+                    let withdrawn = Number(prompt("Enter amount for withdrawn"));
+                    total = total - withdrawn;
+                    alert("Your amount is withdrawn " + total);
+                }
+                else if (choice == 3){
+                    
+                   
+                    alert("your balance is " + total);
+                }
+                else if(choice == 4){
+                    break;
+                }
+                else{
+                    alert("Invalid Choice");
+                }
+            }
+           
+        }
+    </script>
+</body>
+</html>

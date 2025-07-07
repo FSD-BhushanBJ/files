@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        .main-container{
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            padding-left: 550px;
+            text-align: center;
+        }
+        input{
+            height: 35px;
+            font-size: 25px;
+        }
+        
+        button{
+            height: 35px;
+            font-size: 25px;
+        }
+        .check{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>User Login</h1>
+        <input type="text"  id="name" required placeholder="👤 | Enter Usename">
+        <br>    
+        <input type="password" name="" id="password" placeholder="🔒 | Enter Password">
+        <br>
+        <div class="check">
+            <input type="checkbox" name="">Remember me
+            <p>Forget Password ?</p>
+        </div>
+        <button onclick="showLogin()">Login</button>
+        <br>
+        <div id="display"></div>
+    </div>
+    <script>
+        function showLogin(){
+        let username = document.getElementById("name").value;
+        let Password = document.getElementById("password").value;
+        displaymsg = ""
+
+        if(username == 'bhushan' || username == 'bhushan@gmail.com'&& Password == 12345 ){
+            displaymsg = "seccessful";
+        }
+        else{
+            displaymsg = "failed"
+        }
+        document.getElementById("display").innerHTML = displaymsg
+    alert(displaymsg)   
+        }     
+    </script>
+</body>
+</html>

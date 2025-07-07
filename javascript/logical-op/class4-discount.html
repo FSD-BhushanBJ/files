@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount for Member</title>
+    <style>
+        button{
+            height: 35px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="cart">
+    <button onclick="disCount()">Check</button>
+    <input type="checkbox" id="check">
+    <label for="">I am member</label>
+    <script>
+        function disCount(){
+        let value = document.getElementById('check').checked;
+        let cartTotal = document.getElementById('cart').value
+            if(cartTotal >= 50 && value == true){
+                alert("discount")
+            }
+            else{
+                alert("not discount")
+            }
+
+        // document.getElementById("result").innerHTML = cart>= 500 &&  member;
+        // alert(cart>= 500 &&  member)
+    }
+    
+    </script>
+</body>
+</html>

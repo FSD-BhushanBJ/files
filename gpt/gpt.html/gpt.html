@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sai Transformations Ltd</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      background-image: url('your-factory-image.jpg'); /* Add your background */
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .navbar a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .main-text {
+      text-align: center;
+      margin-top: 10%;
+    }
+    .main-text h1, .main-text p {
+      background: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 10px 20px;
+    }
+    .btn {
+      background-color: orange;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .icon-box {
+      background: rgba(0,0,0,0.7);
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      width: 150px;
+      border-radius: 10px;
+    }
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div><strong>SAI TRANSFORMATIONS.LTD</strong></div>
+    <div>
+      <a href="#" id="nav-home">Home</a>
+      <a href="#" id="nav-about">About</a>
+      <a href="#" id="nav-services">Services</a>
+      <a href="#" id="nav-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <button class="lang-toggle" onclick="toggleLanguage()">मराठी / English</button>
+
+  <div class="main-text">
+    <h1 id="heading">PRECISION WELDING & METAL FABRICATION</h1>
+    <p id="subheading">Grills, Gates, Staircases & Custom Solutions</p><br>
+    <button class="btn" id="know-more">KNOW MORE</button>
+  </div>
+
+  <div class="icons">
+    <div class="icon-box" id="service1">Metal Fabrication</div>
+    <div class="icon-box" id="service2">Industrial Shed's</div>
+    <div class="icon-box" id="service3">Roofing Shed's</div>
+    <div class="icon-box" id="service4">School Furnitures</div>
+    <div class="icon-box" id="service5">Metal Furniture</div>
+  </div>
+
+  <script>
+    let currentLang = 'en';
+
+    function toggleLanguage() {
+      const texts = {
+        en: {
+          navHome: "Home",
+          navAbout: "About",
+          navServices: "Services",
+          navContact: "Contact Us",
+          heading: "PRECISION WELDING & METAL FABRICATION",
+          subheading: "Grills, Gates, Staircases & Custom Solutions",
+          knowMore: "KNOW MORE",
+          service1: "Metal Fabrication",
+          service2: "Industrial Shed's",
+          service3: "Roofing Shed's",
+          service4: "School Furnitures",
+          service5: "Metal Furniture"
+        },
+        mr: {
+          navHome: "मुख्यपृष्ठ",
+          navAbout: "आमच्याविषयी",
+          navServices: "सेवा",
+          navContact: "संपर्क करा",
+          heading: "अचूक वेल्डिंग व मेटल फॅब्रिकेशन",
+          subheading: "ग्रिल्स, गेट्स, जिने व सानुकूल उपाय",
+          knowMore: "अधिक जाणून घ्या",
+          service1: "मेटल फॅब्रिकेशन",
+          service2: "औद्योगिक शेड्स",
+          service3: "छताचे शेड्स",
+          service4: "शालेय फर्निचर",
+          service5: "मेटल फर्निचर"
+        }
+      };
+
+      currentLang = currentLang === 'en' ? 'mr' : 'en';
+      document.getElementById("nav-home").textContent = texts[currentLang].navHome;
+      document.getElementById("nav-about").textContent = texts[currentLang].navAbout;
+      document.getElementById("nav-services").textContent = texts[currentLang].navServices;
+      document.getElementById("nav-contact").textContent = texts[currentLang].navContact;
+      document.getElementById("heading").textContent = texts[currentLang].heading;
+      document.getElementById("subheading").textContent = texts[currentLang].subheading;
+      document.getElementById("know-more").textContent = texts[currentLang].knowMore;
+      document.getElementById("service1").textContent = texts[currentLang].service1;
+      document.getElementById("service2").textContent = texts[currentLang].service2;
+      document.getElementById("service3").textContent = texts[currentLang].service3;
+      document.getElementById("service4").textContent = texts[currentLang].service4;
+      document.getElementById("service5").textContent = texts[currentLang].service5;
+    }
+  </script>
+
+</body>
+</html>

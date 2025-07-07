@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiply Numbers</title>
+  </head>
+  <body>
+    <button onclick="playMulti()">Multification of Mayank</button>
+    <script>
+      function playMulti() {
+        while (true) {
+          let num1 = Math.floor(Math.random() * 10 + 1);
+          let num2 = Math.floor(Math.random() * 10 + 1);
+
+          let activeAns = num1 * num2;
+
+          let userAns = prompt(`Enter the Product of ${num1} and ${num2}`);
+          if(userAns == activeAns);
+        }
+      }
+    </script>
+  </body>
+</html>

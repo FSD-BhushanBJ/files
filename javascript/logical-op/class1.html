@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roller Coaster</title>
+</head>
+
+<input type="number" id="age">
+<input type="number" id="height">
+<div id="display"></div>
+<button onclick="checkElidible()"></button>
+
+<body>
+    
+    <script>
+       function checkElidible(){
+        let age = Number (document.getElementById("age").value)
+        let height = Number (document.getElementById("height").value)
+        let displaymsg = ""
+        // let age = Number(prompt("enter your age :"));
+        // let height = Number(prompt("enter your height :"));
+        // let displaymsg = "";
+
+        if(age >= 12 && height >= 140){
+            displaymsg = "eligible to ride"
+        }
+        else{
+            displaymsg = "Not eligible to ride"
+        }
+
+        alert(displaymsg);
+        document.getElementById("display").innerHTML = displaymsg;
+       }
+    </script>
+</body>
+</html>

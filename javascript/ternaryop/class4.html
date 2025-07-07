@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade with ladder If Else</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .container{
+            width: 40%;
+            height: 40%;
+            background-color: lightcoral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+            border-radius: 10px;
+        }
+        input{
+            width: 90%;
+            height: 15%;
+            font-size: 25px;
+        }
+        button{
+            width: 90%;
+            height: 15%;
+            font-size: 20px;
+        }
+        #display{
+            width: 90%;
+            height: 25%;
+            font-size: 25px;
+            background-color: black;
+            color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="input">
+        <button onclick="clickMe()">Cover marks to grade</button>
+        <div id="display">Display</div>
+    </div>
+    <script>
+     function clickMe(){
+        let marks = document.getElementById("input").value;
+        let display = document.getElementById("display").innerHTML;
+
+        if(marks >= 80){
+            display = "A grade";
+        }
+        else if(marks >= 65){
+            display = "B grade";
+        }
+        else if(marks >= 55){
+            display = "C grade";
+        }
+        else if(marks >= 35){
+            display = "D grade";
+        }
+        else{
+            display = "Fail";
+        }
+        document.getElementById("display").innerHTML = display
+     }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opration</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+
+        }
+        .main-container{
+            width: 600px;
+            height: 500px;
+            background-color: lightcoral;
+            display: grid;
+            text-align: center;
+            margin-left: 600px;
+            border-radius: 10px;
+
+        }
+        input{
+            margin-left: 26px;
+            width: 90%;
+            height: 55px;
+            font-size: 25px;
+            border-radius: 20px;
+        }
+        button{
+            height: 55px;
+            width: 90%;
+            border-radius: 10px;
+            font-size: 25px;
+            background-color: green;
+    
+        }
+        .display{
+            margin-left: 26px;
+            height: 10px;
+            width: 90%;
+            
+            font-size: 45px;
+            padding-top: 50px;
+            border-radius: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Calculator 🧮</h1>
+        <input type="number" name="" id="input-one" placeholder="Enter num 1">
+        <input type="number" name="" id="input-two" placeholder="Enter num 2">
+    
+    <div>
+        <button onclick="Calculate()">Calculate</button>
+        <!-- <button onclick="subtraction()">-</button>
+        <button onclick="multification()">x</button>
+        <button onclick="division()">/</button>
+        <button onclick="modulus()">%</button> -->
+        <br>
+        <br>
+        <div class="display" id="showSum"></div>
+        <div class="display" id="showsub"></div>
+        <div class="display" id="showdiv"></div>
+        <div class="display" id="showmul"></div>
+        <div class="display" id="showmod"></div>
+    </div>
+    
+</div>
+    <script>
+        function Calculate(){
+            let num1 = Number (document.getElementById("input-one").value);
+            let num2 = Number (document.getElementById("input-two").value);
+
+
+            let sum = num1 + num2
+            document.getElementById("showSum").innerHTML = sum;
+
+            let sub = num1 - num2
+            document.getElementById("showsub").innerHTML = sub;
+
+            let product = num1 * num2
+            document.getElementById("showmul").innerHTML = product;
+
+            let div = num1 / num2
+            document.getElementById("showdiv").innerHTML = div;
+
+            let mod = num1 % num2
+            document.getElementById("showmod").innerHTML = mod;
+           
+        }
+    // function addition(){
+    //     let num1 =Number (document.getElementById("input-one").value);
+    //     let num2 =Number (document.getElementById("input-two").value);
+    //     let sum = num1 + num2;
+    //     document.getElementById("display").innerHTML = sum;
+
+
+    // }
+    // function subtraction(){
+    //     let num1 = Number (document.getElementById("input-one").value);
+    //     let num2 = Number (document.getElementById("input-two").value);
+    //     let sub = num1 - num2;
+    //     document.getElementById("display").innerHTML = sub;
+    //     document.getElementById("showSum").innerHTML = " sub +" + sub;
+    // }
+    // function multification(){
+    //     let num1 = Number (document.getElementById("input-one").value);
+    //     let num2 = Number (document.getElementById("input-two").value);
+    //     let product = num1 * num2;
+    //     document.getElementById("display").innerHTML = product;
+    // }
+    // function division(){
+    //     let num1 = Number (document.getElementById("input-one").value);
+    //     let num2 = Number (document.getElementById("input-two").value);
+    //     let div = num1 / num2;
+    //     document.getElementById("display").innerHTML = div;
+    // }
+    // function modulus(){
+    //     let num1 = Number (document.getElementById("input-one").value);
+    //     let num2 = Number (document.getElementById("input-two").value);
+    //     let mod = num1 % num2;
+    //     document.getElementById("display").innerHTML = mod;
+       
+    // }
+    
+</script>
+</body>
+</html>

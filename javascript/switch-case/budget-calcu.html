@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Calculator</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-container {
+        height: 80%;
+        width: 60%;
+        background-color: lightcoral;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5%;
+      }
+      input {
+        height: 12%;
+        width: 80%;
+      }
+      button {
+        height: 15%;
+        width: 80%;
+        font-size: 25px;
+      }
+      
+        button:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <h2>💰 Budget Calculator</h2>
+      <h3>
+        Enter your income and expenses to learn how addition,subtraction and
+        division help in budgeting.
+      </h3>
+      <label for="">Income</label>
+      <input type="number" id="income" />
+      <br />
+      <label for="">Rent</label>
+      <input type="number" id="rent" />
+      <br />
+      <label for="">Food</label>
+      <input type="number" id="food" />
+      <br />
+      <label for="">Other</label>
+      <input type="number" id="other" />
+      <br />
+      <button onclick="calculateBud()">Calculate</button>
+      <br />
+      <p id="display"></p>
+    </div>
+    <script>
+      function calculateBud() {
+        let income = Number(document.getElementById("income").value);
+        let rent = Number(document.getElementById("rent").value);
+        let food = Number(document.getElementById("food").value);
+        let other = Number(document.getElementById("other").value);
+
+        let totalexp = (rent + food + other);
+
+        let remaining =( income - totalexp);
+
+        let dailysaving = (remaining / 30);
+
+        document.getElementById("display").innerHTML = "Total Expenses:" + totalexp +  "<br> Total remaining:" + remaining + " <br>Total Dailysaving:" + dailysaving;
+      }
+    </script>
+  </body>
+</html>

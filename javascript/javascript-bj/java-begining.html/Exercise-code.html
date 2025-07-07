@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input & Output</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            height: 100%;
+            background-color: aqua;
+        }
+
+        .header {
+            height: 50px;
+            background-color: beige;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            
+        }
+
+        .submit {
+
+            height: 10%;
+
+            text-align: center;
+
+
+        }
+
+        input[type="button"]:hover {
+            background: radial-gradient(circle, #0f3460, #121212);
+            color: white;
+        }
+
+        input[type="button"] {
+            height: 50px;
+            width: 100%;
+            background: linear-gradient(to right, #00bcd4, #03a9f4);
+            border-color: transparent;
+            color: white;
+            border-radius: px;
+        }
+
+        input[value="Python"] {
+            font-size: 25px;
+        }
+        input[value="C"] {
+            font-size: 25px;
+        }
+        input[value="Java"] {
+            font-size: 25px;
+        }
+        input[value="JavaScript"] {
+            font-size: 25px;
+        }
+        .python{
+            height: 80px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: black;
+            display: grid;
+            grid-template-columns: repeat(3,2fr);
+            text-align: center;
+            padding-left: 550px;
+        }
+        .inputp{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <span class="submit" >
+                <input type="button" value="Python" onclick="openTab(event, 'python')" ><a href="#python" ></a></span>
+            <span class="submit">
+                <input type="button" value="C"></span>
+            <span class="submit">
+                <input type="button" value="Java"></span>
+            <span class="submit">
+                <input type="button" value="JavaScript"></span>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; ">
+            <h2 id='python'>Python</h2>
+          </div>
+          <div class="inputp">
+            <div class="inputp">
+                <h2>Input</h2>
+               </div>
+               <div class="outputp">
+                <h2>Output</h2>
+               </div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <h2>C</h2>
+          </div>
+          <div class="inputp">
+            <div class="inputp">
+                <h2>Input</h2>
+               </div>
+               <div class="outputp">
+                <h2>Output</h2>
+               </div>
+        </div>
+        </div>
+      
+    
+</body>
+
+</html>
