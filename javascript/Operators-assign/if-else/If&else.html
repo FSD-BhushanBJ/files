@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expontial Values</title>
+    <style>
+        .main-container{
+            height: 500px;
+            width: 400px;
+            background-color: lightseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            height: 25px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div id="display"></div>
+        <br>
+        <button onclick="compair()">Compair</button>
+    </div>
+    <script>
+        function compair(){
+            let pass = prompt("Enter a Password");
+            
+            // alert(pass == "123456");
+
+
+                if (pass == "Ep12345"){
+                    alert("Password is correct")
+                }
+                else{
+                    alert("Password is incorrect")
+                }
+            document.getElementById("display").innerHTML = pass;
+        }
+    </script>
+</body>
+</html>

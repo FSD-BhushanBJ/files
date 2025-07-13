@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount %</title>
+</head>
+<body>
+    <div class="main-container">
+        <h2>Discount</h2>
+        <div class="dis1" id="math"></div>
+        <div class="dis2" id="science"></div>
+        <del>2000</del>
+        <button onclick="totalDiscount()"></button>
+    </div>
+    <script>
+        function totalDiscount(){
+            let price = 2000;
+            alert(price)
+
+            let discount = 2;
+
+            price /= discount;
+             document.getElementById("science").innerHTML = price
+             document.getElementById("science").innerHTML = "Discounted Price is"
+            alert(price)
+
+        }
+    </script>
+</body>
+</html>

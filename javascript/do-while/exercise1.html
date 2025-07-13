@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding sum stop when negative no. enters</title>
+  </head>
+  <body>
+    <button onclick="sumNo()">Gained</button>
+    <p id="display"></p>
+    <script>
+      let x = 0;
+      
+           function sumNo(){
+            let number = Number(prompt("Enter a number"));
+            let sum = 0
+
+
+      do{
+        x += number;
+        number = Number(prompt("Enter a number"));
+        
+      }
+      while( number >= 0);
+      console.log(x)
+    document.getElementById("display").innerHTML = x;
+      }
+
+      // let a = 10
+
+      // let b = ++a;
+      // console.log(a,b)
+    </script>
+  </body>
+</html>

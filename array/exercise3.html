@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mark Sheet</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <form action="">
+            <fieldset>
+                <legend>Mark Sheet</legend>
+                <label for="">Student name</label>
+            <input type="text" placeholder="Student name" id="student-name">
+            <label for="">Java</label>
+            <input type="text" placeholder="Subject1" id="Java">
+            <br>
+            <label for="">C++</label>
+            <input type="text" placeholder="Subject2" id="C++">
+            <br>
+            <label for="">Python</label>
+            <input type="text" placeholder="Subject3" id="Python">
+            <br>
+            <label for="">HTML</label>
+            <input type="text" placeholder="Subject4" id="HTML">
+            <br>
+            <label for="">Swift</label>
+            <input type="text" placeholder="Subject5" id="Swift">
+            <br>
+            </fieldset>
+            <button onclick="addTotal()">Total</button>
+            <button onclick="showResult()">Result</button>
+            <div class="data-container" id="data-container"></div>
+        </form>
+
+
+    </div>
+    <script>
+     let studentMarks = [];
+
+     function addTotal(){
+        let studentname = document.getElementById("student-name").value ;
+        let htmlmarks = Number(document.getElementById("HTML").value );
+        let Swiftmarks = Number(document.getElementById("Swift").value );
+        let javamarks = Number(document.getElementById("Java").value );
+        let cmarks = Number(document.getElementById("C++").value );
+        let pythonmarks = Number(document.getElementById("Python").value );
+
+        studentMarks.push({
+            student_name :studentname,
+            html_marks : htmlmarks,
+            c_marks : cmarks,
+            python_marks : pythonmarks,
+            java_marks : javamarks,
+            Swift_marks : Swiftmarks, 
+         });
+         document.getElementById("student-name").value = "";
+         document.getElementById("HTML").value = "";
+         document.getElementById("Swift").value = "";
+         document.getElementById("Java").value = "";
+         document.getElementById("C++").value = "";
+         document.getElementById("Python").value = "";
+
+        
+     }
+
+     function showResult(){
+        let result = ""
+        for(let i = 0; i < studentMarks.length ; i++){
+            result += ` <div class="data" id="display>
+                <span>Studen name : ${studentMarks[i].studentname}<span><br>
+                <span>Total Marks : ${studentMarks[i].htmlmarks +
+                    studentMarks[i].cmarks +
+                    studentMarks[i].javamarks +
+                    studentMarks[i].Swiftmarks +
+                    studentMarks[i].pythonmarks }</span><br/>
+                <span> Percentage : ${(($studentMarks[i].htmlmarks +
+                    studentMarks[i].cmarks +
+                    studentMarks[i].javamarks +
+                    studentMarks[i].Swiftmarks +
+                    studentMarks[i].pythonmarks)/500)* 100}%</span></br>`
+                    document.getElementById("data-container").innerHTML = result
+        }
+     }
+    </script>
+</body>
+</html>

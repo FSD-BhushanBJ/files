@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 1</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      .main-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: lightcoral;
+        gap: 30px;
+      }
+      .day {
+        width: 40%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        width: 500px;
+        height: 80px;
+        font-size: 25px;
+      }
+      .monday {
+        background-color: red;
+        border-color: yellow;
+      }
+      .tuesday {
+        background-color: red;
+        border-color: yellow;
+      }
+      .wednesday {
+        background-color: red;
+        border-color: yellow;
+      }
+      .thusday {
+        background-color: red;
+        border-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <button onclick="weekDay()">Get Day</button>
+      <div class="day">
+        <p id="display">Today is :</p>
+        <div class="container"></div>
+      </div>
+    </div>
+    <script>
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thusday",
+        "Friday",
+        "Saturday",
+      ];
+
+      function weekDay() {
+        let inputDay = Number(prompt("enter a no - 0 - 6"));
+        if (inputDay >= 0 && inputDay == 0) {
+          if (inputDay == 0) {
+            document.getElementById(
+              "container"
+            ).innerHTML = ` <button onclick="weekDay()">Get Day</button>
+        <div class="day">
+            <p id="display">Today is : ${days[inputDay]}</p>
+            <div class="day sunday"></div>
+        </div>`;
+          }else if(inputDay == 1){
+            document.getElementById(
+              "container"
+            ).innerHTML = ` <button onclick="weekDay()">Get Day</button>
+        <div class="day">
+            <p id="display">Today is : ${days[inputDay]}</p>
+            <div class="day monday"></div>
+        </div>`;
+          }else if(inputDay == 2){
+            document.getElementById(
+              "container"
+            ).innerHTML = ` <button onclick="weekDay()">Get Day</button>
+        <div class="day">
+            <p id="display">Today is : ${days[inputDay]}</p>
+            <div class="day tuesday"></div>
+        </div>`;
+          }else if(inputDay == 3){
+            document.getElementById(
+              "container"
+            ).innerHTML = ` <button onclick="weekDay()">Get Day</button>
+        <div class="day">
+            <p id="display">Today is : ${days[inputDay]}</p>
+            <div class="day wednesday"></div>
+        </div>`;
+          }else if(inputDay == 4){
+            document.getElementById(
+              "container"
+            ).innerHTML = ` <button onclick="weekDay()">Get Day</button>
+        <div class="day">
+            <p id="display">Today is : ${days[inputDay]}</p>
+            <div class="day thusday"></div>
+        </div>`;
+          }else if(inputDay == 5){
+            document.getElementById(
+              "container"
+            ).innerHTML = ` <button onclick="weekDay()">Get Day</button>
+        <div class="day">
+            <p id="display">Today is : ${days[inputDay]}</p>
+            <div class="day friday"></div>
+        </div>`;
+          }else {
+            document.getElementById(
+              "container"
+            ).innerHTML = ` <button onclick="weekDay()">Get Day</button>
+        <div class="day">
+            <p id="display">Today is : ${days[inputDay]}</p>
+            <div class="day saturday"></div>
+        </div>`;
+          } else {
+            
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

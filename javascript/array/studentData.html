@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <input type="text" id="msg">
+    <button onclick="postData()">Post</button>
+    <button onclick="getData()">Get</button>
+    <h3 id="display"></h3>
+    <script>
+
+        let studentData = [];
+
+        function postData(){
+            let inputname = document.getElementById("name").value;
+            let inputmessage = document.getElementById("message").value;
+
+            
+            
+            studentData.push({ name: inputname, message: inputmessage});
+            document.getElementById("name").value = "";
+            document.getElementById("msg").value = "";
+        }
+        
+
+        function getData(){
+            for(const student of studentData){
+                document.getElementById("display").innerHTML = student.name + " : " + student.message + "<br>";
+            }
+        }
+    </script>
+</body>
+</html>

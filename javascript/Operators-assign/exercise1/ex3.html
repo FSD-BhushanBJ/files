@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Eligibility</title>
+    <style>
+        .main-container{
+            height: 500px;
+            width: 400px;
+            background-color: lightseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            height: 25px;
+            width: 100px;
+        }
+        .display{
+            height: 50px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <input type="text" name="" id="eligible">
+        <button onclick="eligibilty()">Age</button>
+        <div class="display" id="display"></div>
+        
+    </div>
+    <script>
+        function eligibilty(){
+            let voter = 18;
+            document.getElementById("eligible").innerHTML = voter;
+            
+            if (voter == 18){
+               document.getElementById("display").innerHTML = voter;
+               document.getElementById("display").innerHTML = "Your Eligible"
+
+            }
+            else {
+
+                alert("Not Edligible")
+            }
+        }
+    </script>
+</body>
+</html>

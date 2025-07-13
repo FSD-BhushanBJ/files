@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operators</title>
+</head>
+<body>
+    <div class="main-container">
+        <h2>Salary Deduction</h2>
+        <div class="dis1" id="math">total salary</div>
+        <div class="dis2" id="science">deducted</div>
+        <button onclick="totalDeduct()"></button>
+    </div>
+    <script>
+        
+        function totalDeduct(){
+        
+        let salary = 5000;
+
+        alert(salary);
+        document.getElementById("math").innerHTML = salary;
+        let Deduction = 500;
+        
+
+            // total = total - mathsmarks;
+            
+            salary -= Deduction;
+            alert(salary)
+            document.getElementById("science").innerHTML = salary;
+            
+        }
+    </script>
+</body>
+</html>

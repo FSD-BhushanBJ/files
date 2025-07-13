@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <h1 id="heading">PRECISION WELDING</h1>
+    <h1 id="headingtwo">& METAL FABRICATION</h1>
+    <p id="paragraph">
+      Sai Transformation is Katol based metal manufacturer fabrication company
+      known for roofing sheds, metal and school furniture’s, gates & window
+      grills. A trusted branch of Sai Fabrication & Gas Welding (Est: 1998).
+    </p>
+    <p id="paragraphtwo">
+      We offer a wide range of metal fabrication services, including
+      Gates,,Window-Grills,Staircases,Industry Shed & Roofing and more. Our team
+      possesses the knowledge and skills to handle any project from standard
+      designs to unique,custom-build structures.
+    </p>
+    <select name="language" id="select-lang" onchange="translateLang()">
+      <option value="English">English</option>
+      <option value="Marathi">मराठी</option>
+      <option value="Hindi">हिंदी</option>
+    </select>
+
+   
+
+    <!-- marathi language -->
+    <script src="./marathiData.js"></script>
+    <!-- english language -->
+    <script src="./englishData.js"></script>
+    <!-- hindi language -->
+    <script src="./hindiData.js"></script>
+    <script>
+        const translate = {
+            English: englishData,
+            Marathi: marathiData,
+            Hindi: hindiData
+        };
+
+        function translateLang(){
+            const selectedLanguage = document.getElementById("select-lang").value;
+            let result= translate[selectedLanguage];
+            document.getElementById("heading").innerHTML = translate[selectedLanguage].heading;
+            document.getElementById("headingtwo").innerHTML = translate[selectedLanguage].headingtwo;
+            document.getElementById("paragraph").innerHTML = translate[selectedLanguage].paragraph;
+            document.getElementById("paragraphtwo").innerHTML = translate[selectedLanguage].paragraphtwo;
+
+            localStorage.setItem("langauge", selectedLanguage);
+            
+        }
+
+        window.onload = function (){
+            let savedLanguage = localStorage.getItem("langauge");
+            document.getElementById("select-lang").value = savedLanguage;
+            translateLang();    
+        };
+    </script>
+  </body>
+</html>

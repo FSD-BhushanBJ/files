@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average of 5 numbers</title>
+</head>
+<body>
+    <!-- <input type="number" name="" id="int1">
+    <input type="number" name="" id="int1">
+    <input type="number" name="" id="int1">
+    <input type="number" name="" id="int1">
+    <input type="number" name="" id="int1"> -->
+    <script>
+        let total = 0;
+        let avg = 0;
+        let input = 0;
+
+        let a = 1;
+        do{
+            input = Number(prompt("enter a number:"+ a))
+            total += input;
+            a++;
+        }while(a <= 5);
+
+        avg = total / 5;
+        alert("average" + avg)
+    
+
+       
+
+
+                
+
+    </script>
+</body>
+</html>

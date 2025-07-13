@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="push" placeholder="Enter anything to get msg">
+    <h1 id="push"></h1>
+    <button onclick="postMsg()">Post</button>
+    <button onclick="getmsg()">Get</button>
+    <script>
+        let msgArray = [];
+
+        function postMsg(){
+            let msg = document.getElementById("push"),value;
+
+            msgArray.push(msg);
+            document.getElementById("push").value = " ";
+            getmsg();
+        }
+
+        function getmsg(){
+            document.getElementById("get").innerHTML = msgArray;
+        }
+
+    </script>
+</body>
+</html>

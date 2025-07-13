@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="display"></h1>
+    <script>
+        const fruits = ["apple","banana","mango","orange","grapes"];
+
+            // for(let i = 0; i<fruits.length;i++){
+            //     console.log(fruits[i]);
+            //     document.getElementById("display").innerHTML +=fruits[i] + "<br/>";
+            // }
+
+        for(const fruit of fruits){
+
+            // for of
+            console.log(fruit);
+            document.getElementById("display").innerHTML += fruit + "<br/>";
+        }
+
+        // pop function
+        console.log("poped value " + fruits.pop());
+        console.log(fruits)
+
+
+        // push function
+
+        fruit.push("Kiwi");
+        console.log(fruits);
+
+        // unshitf function
+
+        fruits.unshift("Dragon-fruit")
+        // console.log(fruits);
+
+        // slice functions
+
+        const newFruits = fruits.slice(3);
+        // console.log(newFruits);
+        // document.getElementById("display").innerHTML += newFruits + "<br/>";
+
+
+
+        // splice for removing value
+        // const newFruitstwo = fruits.splice(3,2)
+        // consol.log(newFruitstwo);
+        document.getElementById("display").innerHTML += "Deleted value is  " + newFruitstwo + "<br/>";
+        document.getElementById("display").innerHTML  += "Updated value is  " + fruits + "<br/>"
+
+
+
+        // splice for adding value
+        const newFruitsThree = fruits.splice(3,0,"potato","tomato");
+        console.log(newFruitsThree);
+        document.getElementById("display").innerHTML += "added value " + newFruitsThree + "<br/>"
+        document.getElementById("display").innerHTML += "updated " + fruits + "<br/>"
+    </script>
+</body>
+</html>

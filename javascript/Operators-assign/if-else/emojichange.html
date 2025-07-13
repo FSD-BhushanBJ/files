@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+
+        }
+        .main-container{
+            height: 100%;
+            width: 100%;
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+           background-image: url(https://renewedwellnesscounseling.com/wp-content/uploads/2025/01/Untitled-design-2024-03-11T130642.344-980x551-1.png);
+        }
+        .mood{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        label{
+            font-size: 60px;
+            color: white;
+            text-shadow: 5px 2px;
+        }
+        input{
+            width: 600px;
+            height: 50px;
+            font-size: 25px;
+        }
+        button{
+            margin-top: 20px;
+            height: 50px;
+            width: 200px;
+            font-size: 25px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="mood">
+            <label for="">TYPE YOUR MOOD</label>
+            <br>
+            <br>
+            <br>
+            <input type="text" id="input">
+        </div>
+        <div class="buttongrp">
+            <button onclick="Checkmood()">Happy</button>
+            <button onclick="Checkmood()">Swag</button>
+            <button onclick="Checkmood()">Very Happy</button>
+        </div>
+        <br>
+        <br>
+        <div class="emoji">
+            <img src="https://emoji.aranja.com/static/emoji-data/img-apple-160/1f60a.png" alt="" id="image">
+        </div>
+    </div>
+    <script>
+        function Checkmood(){
+            let mood = document.getElementById("input").value;
+            if(mood == "happy"){
+                document.getElementById("image").src = "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f600.png"
+            }
+            else if(mood == "swag"){
+                document.getElementById("image").src = "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f60e.png"
+            }
+            else if(mood == "veryhappy"){
+                document.getElementById("image").src = "https://emoji.aranja.com/static/emoji-data/img-apple-160/1f601.png"
+            }
+            
+        }
+    </script>
+</body>
+</html>

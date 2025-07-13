@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Mark Sheet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+    }
+    label, input {
+      display: block;
+      margin-top: 10px;
+    }
+    .data {
+      border: 1px solid #000;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <form onsubmit="return false">
+      <fieldset>
+        <legend>Mark Sheet</legend>
+        <label>Student name</label>
+        <input type="text" placeholder="Student name" id="student-name" />
+        
+        <label>Java</label>
+        <input type="text" placeholder="Subject1" id="Java" />
+        
+        <label>C++</label>
+        <input type="text" placeholder="Subject2" id="C++" />
+        
+        <label>Python</label>
+        <input type="text" placeholder="Subject3" id="Python" />
+        
+        <label>HTML</label>
+        <input type="text" placeholder="Subject4" id="HTML" />
+        
+        <label>Swift</label>
+        <input type="text" placeholder="Subject5" id="Swift" />
+      </fieldset>
+      
+      <button type="button" onclick="addTotal()">Add Total</button>
+      <button type="button" onclick="showResult()">Show Result</button>
+      
+      <div class="data-container" id="data-container"></div>
+    </form>
+  </div>
+
+  <script>
+    let studentMarks = [];
+
+    function addTotal() {
+      let studentname = document.getElementById("student-name").value;
+      let htmlmarks = Number(document.getElementById("HTML").value);
+      let Swiftmarks = Number(document.getElementById("Swift").value);
+      let javamarks = Number(document.getElementById("Java").value);
+      let cmarks = Number(document.getElementById("C++").value);
+      let pythonmarks = Number(document.getElementById("Python").value);
+
+      studentMarks.push({
+        student_name: studentname,
+        html_marks: htmlmarks,
+        c_marks: cmarks,
+        python_marks: pythonmarks,
+        java_marks: javamarks,
+        swift_marks: Swiftmarks,
+      });
+
+      // Clear the input fields
+      document.getElementById("student-name").value = "";
+      document.getElementById("HTML").value = "";
+      document.getElementById("Swift").value = "";
+      document.getElementById("Java").value = "";
+      document.getElementById("C++").value = "";
+      document.getElementById("Python").value = "";
+    }
+
+    function showResult() {
+      let result = "";
+
+      for (let i = 0; i < studentMarks.length; i++) {
+        let total =
+          studentMarks[i].html_marks +
+          studentMarks[i].c_marks +
+          studentMarks[i].java_marks +
+          studentMarks[i].swift_marks +
+          studentMarks[i].python_marks;
+
+        let percentage = (total / 500) * 100;
+
+        result += `
+          <div class="data">
+            <span><strong>Student Name:</strong> ${studentMarks[i].student_name}</span><br>
+            <span><strong>Total Marks:</strong> ${total}</span><br>
+            <span><strong>Percentage:</strong> ${percentage.toFixed(2)}%</span>
+          </div>
+        `;
+      }
+
+      document.getElementById("data-container").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

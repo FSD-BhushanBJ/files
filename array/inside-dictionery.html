@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionery Inside Dictionery</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        const studentData = [{
+            name : 'Bhushan',
+            age : 20,
+            marks:{
+                html :60,
+                css:90,
+                java: 80,
+            }
+        },
+        {
+            name : 'Mayank',
+            age : 19,
+            marks:{
+                html :85,
+                css:90,
+                java: 82,
+            }
+        },
+        {
+            name : 'Ratnesh',
+            age : 15,
+            marks:{
+                html :99,
+                css:90,
+                java: 82,
+            }
+        },
+        {
+            name : 'Shruti',
+            age : 6,
+            marks:{
+                html :99,
+                css:90,
+                java: 82,
+            }
+        }
+    ]
+    
+
+//     let result = `Name is :- ${studentData[0].name} and CSS marks is ${studentData[0].marks.css}`;
+//    // let result = studentData[0].name + " and " + studentData[0].marks.html
+//     console.log(result);
+
+        let result = ``;
+        for(let i = 0; i<studentData.length; i++){
+            //result += `Name is ${studentData[i].name} and Html marks is ${studentData[i].age}<br>`;
+            result += `Name is ${studentData[i].name} and age is ${studentData[i].age}<br>`;
+        }
+        document.getElementById("result").innerHTML = result;
+    </script>
+</body>
+</html>

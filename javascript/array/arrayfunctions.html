@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Functions</title>
+    <style>
+        button{
+            padding: 6px;
+            font-size: 35px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="display"></h1>
+    <!-- adding new values in array -->
+    <button onclick="addingValueslast()">Push</button>
+    <button onclick="addingValuesfirst()">Unshift</button>
+
+    <!-- removing values in array -->
+    <button onclick="removevaluelast()">Pop</button>
+    <button onclick="removevaluefirst()">Shift</button>
+
+    <!-- extract section from array -->
+     <button onclick="extractSection()">Slice</button>
+
+     <!-- replace value in array -->
+      <button onclick=" extractvaluessplice()">Splice</button>
+
+      <script>
+        const studentsName = [" Saim "," Ashish "," Bhushan "," Mayank "," Praful "," Shruti "," Vishal "]
+        document.getElementById("display").innerHTML = studentsName;
+
+        function addingValueslast(){
+            studentsName.push(" Pratik Sir ");
+            document.getElementById("display").innerHTML = studentsName;
+
+        }
+        function addingValuesfirst(){
+            studentsName.unshift(" Shriya ");
+            document.getElementById("display").innerHTML = studentsName;
+        }
+
+        function removevaluelast(){
+            studentsName.pop(" Vishal ");
+            document.getElementById("display").innerHTML = studentsName;
+        }
+
+        function removevaluefirst(){
+            studentsName.shift(" Saim ");
+            document.getElementById("display").innerHTML = studentsName;
+        }
+
+        function extractSection(){
+                const newStudentname = studentsName.slice(2,5);
+                document.getElementById("display").innerHTML = newStudentname;
+            
+        }
+
+        function extractvaluessplice(){
+            studentsName.splice(2,1," Achal ", " Samiksha ");
+            document.getElementById("display").innerHTML = studentsName;
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="display2"></h1>
+    <script>
+        // let carNames = ["Tata","mahindra","Force"];
+        // console.log(carNames);
+        // document.getElementById("display").innerHTML = carNames[0];
+
+        // const fruits = new Array("grapes","mango","apple");
+        // console.log(fruits);
+        // document.getElementById("display").innerHTML = fruits;
+
+        const cars = ["tata","mahindra","force","honda","kia","maruti"];
+
+        let i = 0
+        let output = ""
+        let CARS = [];
+        
+        while(i <= cars.length-1){
+            output = cars[i].toUpperCase();
+            CARS.push(output);
+            console.log(CARS);
+            document.getElementById("display2").innerHTML = CARS + "<br/>";
+            i++;
+          
+        }
+       
+
+        let num = [];
+        let x = 0;
+
+        while(x <= 10){
+            let table = x * 5
+            num.push(table);
+
+            x++
+            
+        }
+        console.log(num);
+        document.getElementById("display2").innerHTML = num + "<br/>";
+
+    </script>
+</body>
+</html>
